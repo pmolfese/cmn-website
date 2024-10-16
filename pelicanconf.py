@@ -1,6 +1,5 @@
 AUTHOR = 'Quang Nguyen'
 SITENAME = 'Center for Multimodal Neuroimaging'
-SITEURL = "/"
 
 PATH = "content"
 
