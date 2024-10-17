@@ -3,7 +3,7 @@ Date: 2010-12-03 10:20
 ######################
 
 
-<form class="contact-message-contact-form contact-message-form contact-form" data-user-info-from-browser="" data-drupal-selector="contact-message-contact-form" action="/contact" method="post" id="contact-message-contact-form" accept-charset="UTF-8" data-once="form-updated user-info-from-browser" data-drupal-form-fields="edit-name,edit-mail,edit-subject-0-value,edit-message-0-value,edit-submit">
+<form class="contact-message-contact-form contact-message-form contact-form" data-user-info-from-browser="" data-drupal-selector="contact-message-contact-form" action="https://formspree.io/f/mrbggrjq" method="post" id="contact-message-contact-form" accept-charset="UTF-8" data-once="form-updated user-info-from-browser" data-drupal-form-fields="edit-name,edit-mail,edit-subject-0-value,edit-message-0-value,edit-submit">
   <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
       <label for="edit-name" class="js-form-required form-required">Your name<span class="visually-hidden"> (Required)</span></label>
         <input data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="60" maxlength="255" class="form-text required" required="required" aria-required="true">
@@ -38,3 +38,24 @@ Date: 2010-12-03 10:20
 </div>
 
 </form>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Get form fields
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Check if fields are empty
+    if (!name || !email || !message) {
+        alert("All fields are required!");
+        return;
+    }
+
+    // If validation passes, submit the form
+    this.submit();
+});
+</script>
