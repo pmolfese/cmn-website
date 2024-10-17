@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 cmn.nimh.nih.gov/**
 .DS_Store
+output/*

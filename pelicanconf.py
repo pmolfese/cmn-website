@@ -33,5 +33,6 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-THEME = "themes/cmn-themse"
+THEME = "themes/cmn-themes"
 # JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+STATIC_PATHS = ['images', 'pdfs', 'extra/CNAME']
