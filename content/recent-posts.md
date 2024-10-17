@@ -2,7 +2,6 @@ Title: Recent Posts
 Date: 2010-12-03 10:20
 
 
-
 <div class="views-element-container"><div class="view view-recent-posts view-id-recent_posts view-display-id-page_1 js-view-dom-id-df7a6bcaac7b1c7ad7f05b5a651763f9e0808dcc038a304981588ca78370ce7e">
   
     
