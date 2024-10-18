@@ -450,7 +450,7 @@ Uri Hasson -&nbsp;<a href="https://videocast.nih.gov/watch=42538&amp;start=29491
   
   <div class="node__content">
     
-            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/essicaSchrouff.jpg?itok=9sCMIbcW" width="340" height="340" alt="JessicaSchroof_Photo" class="image-style-event-teaser">
+            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/JessicaSchrouff.jpg" width="340" height="340" alt="JessicaSchroof_Photo" class="image-style-event-teaser">
 
 
 </div>
