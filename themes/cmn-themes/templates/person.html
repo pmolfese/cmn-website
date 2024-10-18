@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+{{title}}
+{% endblock %}
+{% block content %}
+<img loading="lazy" src="{{static}}/images/{{image}}" alt="">
+<div class="field field--name-field-job-title field--type-string field--label-visually_hidden">
+    <div class="field__label visually-hidden">Job title</div>
+    <div class="field__item">{{position}}</div>
+</div>
+<div class="field field--name-field-links field--type-link field--label-visually_hidden"></div>
+    <div class="field__label visually-hidden">Links</div>
+    <ul class="field__items">
+          <li class="field__item"><a href="{{impactstory}}">Impactstory</a></li>
+          <li class="field__item"><a href="{{linkedin}}">LinkedIn</a></li>
+          <li class="field__item"><a href="{{scholar}}">Scholar</a></li>
+          <li class="field__item"><a href="{{github}}">GitHub</a></li>
+          <li class="field__item"><a href="{{openalex}}">OpenAlex</a></li>
+        </ul>
+  </div>
+
+  <div class="views-element-container"><section aria-labelledby="teams-eva" class="view view-eva view-teams view-id-teams view-display-id-entity_view_1 js-view-dom-id-ba4b659ce6d62a8061961fe7cc6f3dbdfaeae6d78749665745ae4c25630b16de">
+    <div id="teams-eva">Teams</div>
+        <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/team/{{team_link}}" hreflang="en">{{team}}</a></span></div></div>
+  
+    
+  </section>
+  </div>
+{% endblock %}
