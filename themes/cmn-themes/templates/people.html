@@ -63,7 +63,12 @@ People
             {% if person.employee_status == "Contributors" %}
             <div class="views-row"><div class="views-field views-field-rendered-entity"><span class="field-content">
                 <div class="node node--type-person node--view-mode-teaser">
-                  <a href="/people/{{person.slug}}" rel="bookmark">{{person.title}}</a>
+                  <a href="/people/{{person.slug}}" rel="bookmark">
+                    {{person.title}}
+                    {% if person.subheading %}
+                    , {{person.subheading}} 
+                    {% endif %} 
+                </a>
                 </div>
 
                 {% if person.place == 'Member' %}

@@ -27,7 +27,7 @@ def generate_people_pages(generator):
 
         if metadata.get("team") == "Data Science and Sharing Team":
             teams_dsst_member.append(context)
-        if metadata.get("team") == "Machine Learning Team":
+        if metadata.get("team") == "Machine Learning Core":
             teams_mlt.append(context)
 
 
