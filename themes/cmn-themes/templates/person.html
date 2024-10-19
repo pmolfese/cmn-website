@@ -11,19 +11,31 @@
 <div class="field field--name-field-links field--type-link field--label-visually_hidden"></div>
     <div class="field__label visually-hidden">Links</div>
     <ul class="field__items">
+          {% if impactstory %}
           <li class="field__item"><a href="{{impactstory}}">Impactstory</a></li>
+          {% endif %}
+          {% if linkedin %}
           <li class="field__item"><a href="{{linkedin}}">LinkedIn</a></li>
+          {% endif %}
+          {% if scholar %}
           <li class="field__item"><a href="{{scholar}}">Scholar</a></li>
+          {% endif %}
+          {% if github %}
           <li class="field__item"><a href="{{github}}">GitHub</a></li>
+          {% endif %}
+          {% if openalex %}
           <li class="field__item"><a href="{{openalex}}">OpenAlex</a></li>
+          {% endif %}
         </ul>
   </div>
 
+  
+  {% if place == 'Member' %}
   <div class="views-element-container"><section aria-labelledby="teams-eva" class="view view-eva view-teams view-id-teams view-display-id-entity_view_1 js-view-dom-id-ba4b659ce6d62a8061961fe7cc6f3dbdfaeae6d78749665745ae4c25630b16de">
     <div id="teams-eva">Teams</div>
         <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/team/{{team_link}}" hreflang="en">{{team}}</a></span></div></div>
   
-    
   </section>
   </div>
+  {% endif %}
 {% endblock %}

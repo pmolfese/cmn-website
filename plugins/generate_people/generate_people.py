@@ -7,6 +7,8 @@ def generate_people_pages(generator):
     # Loop over all articles and filter for 'People' category (optional)
     people_dir = os.path.join(generator.settings['PATH'], 'people')
     people = []
+    teams_dsst_member = []
+    teams_mlt = []
     for filename in os.listdir(people_dir):
         if not filename.endswith('.md'):
             continue
@@ -23,6 +25,11 @@ def generate_people_pages(generator):
         }
         people.append(context)
 
+        if metadata.get("team") == "Data Science and Sharing Team":
+            teams_dsst_member.append(context)
+        if metadata.get("team") == "Machine Learning Team":
+            teams_mlt.append(context)
+
 
         # Define where to save the generated person page
         output_path = os.path.join(generator.output_path, 'people', f"{slug}.html")
@@ -38,7 +45,12 @@ def generate_people_pages(generator):
         with open(output_path, 'w', encoding='utf-8') as file:
             file.write(template.render(context))
 
+    # Sort people by title in ascending order
+    people.sort(key=lambda person: person.get('title', '').lower())
+    print(people)
     generator.context['people'] = people
+    generator.context['teams_dsst'] = teams_dsst_member
+    generator.context['teams_mlt'] = teams_mlt
 
 def register():
     """Register the plugin to Pelican's signal system."""

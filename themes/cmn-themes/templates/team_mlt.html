@@ -1,0 +1,331 @@
+{% extends "base.html" %}
+{% block title %}
+Machine Learning Core
+{% endblock %}
+{% block content %}
+<div class="node__content"></div>
+   <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+      <div class="field__item">
+         <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+               <p>The mission of the Machine Learning Core is to support researchers in the NIMH intramural research program who want to address research problems in psychology, psychiatry, and neuroscience, using statistics and machine learning approaches. We do this by consulting with individual researchers and guiding them in the use of the appropriate tools and methods, or by taking on the analysis process ourselves, if this is more expedient. In parallel, we are a machine learning research group and, as such, develop new methods and analysis approaches, motivated by the needs of researchers or by the practical possibilities arising from advances in the field.</p>
+               <p>contact: <a href="francisco.pereira@nih.gov">francisco.pereira@nih.gov</a></p>
+            </div>
+         </div>
+      </div>
+      <div class="field__item">
+         <h2 class="paragraph paragraph--type--header paragraph--view-mode--default">Members</h2>
+      </div>
+   </div>
+   <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+      <p>The Machine Learning Core supports researchers in the NIMH intramural research program who want to address research problems in clinical and cognitive neuroscience using machine learning approaches.&nbsp;</p>
+   </div>
+
+   <div class="field field--name-field-team-m field--type-entity-reference field--label-visually_hidden">
+      <div class="field__label visually-hidden">Team Members</div>
+      <div class="field__items">
+         {% for person in teams_mlt %}
+         {% if person.place == "Member" %}
+         <div class="field__item">
+            <article aria-labelledby="node-title-7" class="node node--type-person node--view-mode-team-photo">
+               <h2 id="node-title-7">
+                  <a href="/people/{{person.slug}}" rel="bookmark"><span
+                     class="field field--name-title field--type-string field--label-hidden">{{person.title}}</span>
+                  </a>
+               </h2>
+               <div class="node__content">
+                  <div class="field field--name-field-photo field--type-image field--label-hidden field__item"> <img
+                     loading="lazy"  src="{{static}}/images/{{person.image}}"
+                     width="150" height="150" alt="" class="image-style-photo">
+                  </div>
+                  <div class="field field--name-field-job-title field--type-string field--label-visually_hidden">
+                     <div class="field__label visually-hidden">Job title</div>
+                     <div class="field__item">{{person.position}}</div>
+                  </div>
+                  <div class="field field--name-field-links field--type-link field--label-visually_hidden">
+                     <div class="field__label visually-hidden">Links</div>
+                     <ul class="field__items">
+                       {% if person.impactstory %}
+                       <li class="field__item"><a href="{{person.impactstory}}">Impactstory</a></li>
+                       {% endif %}
+                       {% if person.linkedin %}
+                       <li class="field__item"><a href="{{person.linkedin}}">LinkedIn</a></li>
+                       {% endif %}
+                       {% if person.scholar %}
+                       <li class="field__item"><a href="{{person.scholar}}">Scholar</a></li>
+                       {% endif %}
+                       {% if person.github %}
+                       <li class="field__item"><a href="{{person.github}}">GitHub</a></li>
+                       {% endif %}
+                       {% if person.openalex %}
+                       <li class="field__item"><a href="{{person.openalex}}">OpenAlex</a></li>
+                       {% endif %}
+                     </ul>
+                  </div>
+               </div>
+            </article>
+         </div>
+         {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+   <div class="views-element-container"></div>
+   <div class="views-element-container"></div>
+   
+    
+   <div class="field field--name-field-paragraphs-after-team field--type-entity-reference-revisions field--label-hidden field__items">
+      <div class="field__item">
+         <h2 class="paragraph paragraph--type--header paragraph--view-mode--default">Software and Resources</h2>
+      </div>
+      <div class="field__item">
+         <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+               <ul>
+                  <li><a href="https://github.com/LukasMut/VICE">VICE toolbox for creating interpretable item embeddings from odd-one-out triplet task judgments</a><br>
+                     (the developer is Lukas Muttenthaler, please see VICE paper for the method we developed jointly)
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="field__item">
+         <h2 class="paragraph paragraph--type--header paragraph--view-mode--default">Preprints (under review)</h2>
+      </div>
+      <div class="field__item">
+         <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+               <ul>
+                  <li>
+                     <p><a href="http://arxiv.org/abs/2405.18597">Causal Inference in the Closed-Loop: Marginal Structural Models for Sequential Excursion Effects</a><br>
+                        Levis A., Loewinger G., Pereira F.
+                     </p>
+                  </li>
+                  <li>
+                     <p><a href="https://osf.io/preprints/psyarxiv/t9fcp">Outcomes that matter to depressed adolescents can be identified with large language models</a><br>
+                        Xin A., Lossio-Ventura J. A., Krause, K. R., Fiorini, G., Midgley N., Pereira F., and Nielson D. M.
+                     </p>
+                  </li>
+                  <li>
+                     <p><a href="https://www.biorxiv.org/content/10.1101/2024.06.05.596482v1">In-Scanner Thoughts shape Resting-state Functional Connectivity: how participants “rest” matters</a><br>
+                        Gonzalez-Castillo J., Spurney M., Lam K. C., Gephart I. S.,&nbsp;&nbsp;Pereira F., Handwerker D. A.,&nbsp; Kam J. W. Y.,&nbsp; Bandettini P.
+                     </p>
+                  </li>
+                  <li><a href="https://elifesciences.org/reviewed-preprints/95802">A Statistical Framework for Analysis of Trial-Level Temporal Dynamics in Fiber Photometry Experiments</a><br>
+                     Loewinger G., Cui E., Lovinger D., Pereira F.
+                  </li>
+                  <li><a href="https://www.biorxiv.org/content/biorxiv/early/2023/05/25/2023.05.25.542329.full.pdf">Distinct brain-wide presynaptic networks underlie the functional identity of individual cortical neurons</a><br>
+                     Inacio A. R., Lam K. C., Zhao Y., Pereira F., Gerfen C. R., Lee S.
+                  </li>
+                  <li><a href="https://osf.io/preprints/psyarxiv/x34pn">Dynamic effects of psychiatric vulnerability, loneliness, and social distancing on distress during the first year of the COVID-19 pandemic: Insights from a large-scale longitudinal study</a><br>
+                     Atlas L. Y., Farmer C., Shaw J., Gibbon A., Guinee E.P.,&nbsp; Lossio-Ventura J. A., Ballard E., Ernst M., Japee S., Pereira F.,&nbsp; Chung J. Y.
+                  </li>
+                  <li><a href="https://psyarxiv.com/7enqw/">Prediction of mental well-being from individual characteristics and circumstances during the COVID-19 pandemic</a><br>
+                     Harris C., Farmer C., Gibbon A., Shaw J., Thomas A.,&nbsp;Atlas L. Y., Chung J. Y., Pereira F.
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="field__item">
+         <h2 class="paragraph paragraph--type--header paragraph--view-mode--default">Selected publications</h2>
+      </div>
+      <div class="field__item">
+         <div class="paragraph paragraph--type--_-columns paragraph--view-mode--default">
+            <div class="field field--name-field-left-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+               <div class="field__item">
+                  <h3 class="paragraph paragraph--type--header paragraph--view-mode--default">Methods</h3>
+               </div>
+               <div class="field__item">
+                  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+                     <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+                        <ul>
+                           <li><a href="https://mental.jmir.org/2024//e50150/">A Comparison of ChatGPT and Fine-Tuned Open Pre-Trained Transformers (OPT) Against Widely Used Sentiment Analysis Tools: Sentiment Analysis of COVID-19 Survey Data</a><br>
+                              Lossio-Ventura J. A., Weger R., Lee A., Guinee E., Chung J. Y., Atlas L. Y., Linos E., Pereira F.<br>
+                              JMIR Mental Health Vol 11, 2024
+                           </li>
+                           <li><a href="https://arxiv.org/abs/2004.11114">"Improving the Interpretability of fMRI Decoding using Deep Neural Networks and Adversarial Robustness"</a><br>
+                              McClure&nbsp;P., Moraczewski&nbsp;D., Lam&nbsp;K. C., Thomas&nbsp;A., Pereira&nbsp;F.&nbsp;<br>
+                              Aperture Neuro, 2023
+                           </li>
+                           <li><a href=" https://openreview.net/forum?id=M_MvkWgQSt">"Real-time variational method for learning neural trajectory and its dynamics"</a><br>
+                              Matthew Dowling, Yuan Zhao, Il Memming Park<br>
+                              in International Conference on Learning Representations, 2023
+                           </li>
+                           <li><a href="Matthew Dowling, Yuan Zhao, Il Memming Park">"Linear time GPs for inferring latent trajectories from neural spike trains"</a><br>
+                              Matthew Dowling, Yuan Zhao, Il Memming Park<br>
+                              in International Conference on Machine Learning, 2023
+                           </li>
+                           <li><a href="https://arxiv.org/abs/2205.00756">"VICE: Variational Interpretable Concept Embeddings"</a><br>
+                              Muttenthaler L., Zheng C., McClure P., Vandermeulen R., Hebart M., Pereira F.&nbsp;<br>
+                              in Neural Information Processing Systems, 2022
+                           </li>
+                           <li><a href="https://arxiv.org/pdf/1802.01241.pdf">Semantic Projection: Recovering Human Knowledge of Multiple, Distinct, Object Features from Word Embeddings</a><br>
+                              Grand G., Blank I., Pereira F., Fedorenko E.<br>
+                              Nature Human Behaviour, 2022
+                           </li>
+                           <li><a href="https://www.frontiersin.org/articles/10.3389/fninf.2019.00067/full">"Knowing What You Know in Brain Segmentation Using Bayesian Deep Neural Networks"</a><br>
+                              McClure, P., Rho, N., Lee, J., Kaczmarzyk, J., Zheng, C., Ghosh, S., Nielson, D., Thomas, A., Bandettini, P., Pereira, F.<br>
+                              Frontiers in Neuroinformatics, 2019
+                           </li>
+                           <li><a href="https://arxiv.org/abs/1901.02915">"Revealing interpretable object representations from human behavior"</a><br>
+                              Zheng, C., Pereira, F., Baker, C., Hebart, M.<br>
+                              International Conference on Learning Representations, 2019
+                           </li>
+                           <li><a href="https://www.biorxiv.org/content/biorxiv/early/2021/06/16/2021.06.15.448556.full.pdf">"Validating the Representational Space of Deep Reinforcement Learning Models of Behavior with Neural Data"</a><br>
+                              Bruch S. N. , McClure P., Zhou J., Schoenbaum G., Pereira F.<br>
+                              bioRxiv preprint
+                           </li>
+                           <li><a href="https://arxiv.org/pdf/2009.09900">A Deep Neural Network Tool for Automatic Segmentation of Human Body Parts in Natural Scenes</a><br>
+                              McClure P. , Reimann G., Ramot M., Pereira F.<br>
+                              arXiv preprint
+                           </li>
+                           <li><a href="https://oxfordre.com/neuroscience/view/10.1093/acrefore/9780190264086.001.0001/acrefore-9780190264086-e-46">"Deep Neural Networks in Computational Neuroscience"</a><br>
+                              Kietzmann, T., McClure, P., Kriegeskorte, N.<br>
+                              Oxford Research Encyclopedia of Neuroscience, 2019
+                           </li>
+                           <li><a href="https://arxiv.org/abs/1805.10863">"Distributed Weight Consolidation: A Brain Segmentation Case Study"</a><br>
+                              McClure P., Zheng C., Kaczmarzyk J., Rogers-Lee J., Ghosh S., Nielson D., Bandettini P., Pereira F.<br>
+                              Neural Information Processing Systems, 2018
+                           </li>
+                           <li><a href="https://arxiv.org/abs/1712.09713">"Extrapolating Expected Accuracies for Large Multi-Class Problems"</a><br>
+                              Zheng, C., Achanta R., Benjamini. Y.<br>
+                              Journal of Machine Learning Research vol. 19. 2018.
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="field field--name-field-right-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+               <div class="field__item">
+                  <h3 class="paragraph paragraph--type--header paragraph--view-mode--default">Applications</h3>
+               </div>
+               <div class="field__item">
+                  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+                     <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+                        <ul>
+                           <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10366614/">"Manifold learning for fMRI time-varying functional connectivity"</a><br>
+                              Gonzalez-Castillo J., Fernandez I., Lam K., Handwerker D., Pereira F., Bandettini P.<br>
+                              Front Hum Neurosci. 2023; 17: 1134012
+                           </li>
+                           <li><a href="https://mental.jmir.org/2023/1/e40899/">Trends in Language Use During the COVID-19 Pandemic and Relationship Between Language Use and Mental Health: Text Analysis Based on Free Responses From a Longitudinal Study</a><br>
+                              Weger R., Lossio-Ventura J. A., Rose-McCandlish M., Shaw J., Sinclair S., Pereira F., Chung J., Atlas L.<br>
+                              JMIR Mental Health 10 (1), e40899, 2023
+                           </li>
+                           <li><a href="https://doi.org/10.1523/JNEUROSCI.0267-22.2023">"Sensory and Choice Responses in MT Distinct from Motion Encoding"</a><br>
+                              Aaron J. Levi, Yuan Zhao, Il Memming Park and Alexander C. Huk<br>
+                              Journal of Neuroscience 22 March 2023, 43 (12) 2090-2103
+                           </li>
+                           <li><a href="https://psyarxiv.com/bwv58">"A Highly Replicable Decline in Mood During Rest and Simple Tasks"</a><br>
+                              Jangraw D., Keren H., Sun H., Bedder R., Rutledge R., Pereira F., Thomas A., Pine D., Zheng C., Nielson D., Stringaris A.<br>
+                              Nature Human Behaviour 7 (4), 596-610, 2022
+                           </li>
+                           <li><a href="https://pubmed.ncbi.nlm.nih.gov/35452785/">"Mood and Behaviors of Adolescents With Depression in a Longitudinal Study Before and During the COVID-19 Pandemic"</a><br>
+                              Sadeghi N., Fors P.Q., Eisner L., Taigman J., Qi K., Gorham L.S., Camp C.C., O'Callaghan G., Rodriguez D., McGuire J., Garth E.M., Engel C., Davis M., Towbin K.E., Stringaris A., Nielson D.M.
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/bhac205.pdf">"Working memory and reward increase the accuracy of animal location encoding in the medial prefrontal cortex"</a><br>
+                              Ma X., Zheng C., Chen Y., Pereira F., Zheng L.<br>
+                              Cerebral Cortex, 2022, 1-15
+                           </li>
+                           <li><a href="https://www.researchgate.net/profile/Matthew-Birnie/publication/358578402_Developmental_Trajectories_of_Anhedonia_in_Preclinical_Models/links/6393757e095a6a777418186b/Developmental-Trajectories-of-Anhedonia-in-Preclinical-Models.pdf#page=52">"Origins of Anhedonia in Childhood and Adolescence"</a><br>
+                              Prabhakar J., Nielson D.M., Stringaris A.
+                           </li>
+                           <li><a href="https://elifesciences.org/articles/62051">"The temporal representation of experience in subjective mood"</a><br>
+                              Keren H., Zheng C.,&nbsp;Jangraw D. C., Chang K., Vitale A., Nielson D., Rutledge R. B., Pereira F., Stringaris A.<br>
+                              eLife 2021
+                           </li>
+                           <li><a href="https://arxiv.org/abs/2007.04245">"Mental representations of objects reflect the ways in which we interact with them"<br>
+                              </a>Lam K. C., Pereira F., Vaziri-Pashkam M., Woodard K., McMahon E.<br>
+                              Proceedings of the Cognitive Science Society Conference, 2021 [talk]
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/autism.pdf">Gauging facial feature viewing preference as a stable individual trait in autism spectrum disorder.</a><br>
+                              Reimann G., Walsh C., Csumitta K., McClure P., Pereira F., Martin A., Ramot M.<br>
+                              Autism Research 14:1670–1683, 2021
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/PIIS2211124721000875.pdf">Cell-type-specific recruitment of GABAergic interneurons in the primary somatosensory cortex by long-range inputs</a><br>
+                              Naskar S., Qi J., Pereira F., Gerfen, C., Lee, S.<br>
+                              Cell Reports 34, 108774, 2021
+                           </li>
+                           <li><a href="https://academic.oup.com/cercor/advance-article/doi/10.1093/cercor/bhab417/6469156?login=true">"Magnetoencephalographic Correlates of Mood and Reward Dynamics in Human Adolescents"</a><br>
+                              Liuzzi, L., Chang, K.K., Zheng, C., Keren, H., Saha, D., Nielson, D.M. and Stringaris, A.<br>
+                              Cerebral Cortex, 2021
+                           </li>
+                           <li><a href="https://psyarxiv.com/7wrgh/">"Revealing the multidimensional mental representations of natural objects underlying human similarity judgments"</a><br>
+                              Hebart, M., Zheng, C., Pereira, F., Baker, C.<br>
+                              Nature Human Behaviour, 2020
+                           </li>
+                           <li>"<a href="http://www.emaliemcmahon.com/files/McMahon2019_JoV.pdf">Subtle predictive movements reveal actions regardless of social context</a>"<br>
+                              McMahon, E.G., Zheng, C.Y., Pereira, F., Gonzalez, R., Ungerleider, L.G. and Vaziri-Pashkam, M.<br>
+                              Journal of vision 19 (7), 16-16, 2019
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/nihms-1538935.pdf">Imaging the spontaneous flow of thought: Distinct periods of cognition contribute to dynamic functional connectivity during rest</a><br>
+                              Gonzalez-Castillo J., Caballero-Gaudes C., Topolski N., Handwerker D., Pereira F. , Bandettini P.<br>
+                              Neuroimage 15; 202: 116129. 2019
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/nihms-1044506.pdf">Data‐driven identification of subtypes of executive function across typical development, attention deficit hyperactivity disorder, and autism spectrum disorders</a><br>
+                              Vaidya C., You X., Mostofsky S., Pereira F., Berl M., Kenworthy L.<br>
+                              J Child Psychol Psychiatry 61(1): 51–61. 2019
+                           </li>
+                           <li><a href="http://www.franciscopereira.org/Papers/pereira2018.pdf">"Toward a universal decoder of linguistic meaning from brain activation"</a><br>
+                              Pereira F., Lou B., Pritchett B., Ritter S., Gershman S., Kanwisher N., Botvinick M., Fedorenko E.<br>
+                              Nature Communications 9 (963), 2018
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="views-element-container"></div>
+   <div class="views-element-container"></div>
+   <div class="field field--name-field-fm field--type-entity-reference field--label-above">
+      <div class="field__label">Former Team Members</div>
+      <div class="field__items">
+       {% for person in teams_mlt %}
+       {% if person.place == "Former Team Members" %}
+       <div class="field__item">
+          <article aria-labelledby="node-title-7" class="node node--type-person node--view-mode-team-photo">
+             <h2 id="node-title-7">
+                <a href="/people/{{person.slug}}" rel="bookmark"><span
+                   class="field field--name-title field--type-string field--label-hidden">{{person.title}}</span>
+                </a>
+             </h2>
+             <div class="node__content">
+                <div class="field field--name-field-photo field--type-image field--label-hidden field__item"> <img
+                   loading="lazy"  src="{{static}}/images/{{person.image}}"
+                   width="150" height="150" alt="" class="image-style-photo">
+                </div>
+                <div class="field field--name-field-job-title field--type-string field--label-visually_hidden">
+                   <div class="field__label visually-hidden">Job title</div>
+                   <div class="field__item">{{person.position}}</div>
+                </div>
+                <div class="field field--name-field-links field--type-link field--label-visually_hidden">
+                   <div class="field__label visually-hidden">Links</div>
+                   <ul class="field__items">
+                     {% if person.impactstory %}
+                     <li class="field__item"><a href="{{person.impactstory}}">Impactstory</a></li>
+                     {% endif %}
+                     {% if person.linkedin %}
+                     <li class="field__item"><a href="{{person.linkedin}}">LinkedIn</a></li>
+                     {% endif %}
+                     {% if person.scholar %}
+                     <li class="field__item"><a href="{{person.scholar}}">Scholar</a></li>
+                     {% endif %}
+                     {% if person.github %}
+                     <li class="field__item"><a href="{{person.github}}">GitHub</a></li>
+                     {% endif %}
+                     {% if person.openalex %}
+                     <li class="field__item"><a href="{{person.openalex}}">OpenAlex</a></li>
+                     {% endif %}
+                   </ul>
+                </div>
+             </div>
+          </article>
+       </div>
+       {% endif %}
+       {% endfor %}
+   </div>
+</div>
+{% endblock %}
