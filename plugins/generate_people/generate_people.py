@@ -47,7 +47,8 @@ def generate_people_pages(generator):
 
     # Sort people by title in ascending order
     people.sort(key=lambda person: person.get('title', '').lower())
-    print(people)
+    teams_dsst_member.sort(key=lambda person: person.get('title', '').lower())
+    teams_mlt.sort(key=lambda person: person.get('title', '').lower())
     generator.context['people'] = people
     generator.context['teams_dsst'] = teams_dsst_member
     generator.context['teams_mlt'] = teams_mlt
