@@ -9,3 +9,6 @@ Slug: 9
 Date: 2024-10-19 14:05
 Employee_Status: Alumni
 Subheading: Current: Founder of Python AI Solutions
+Team: Data Science and Sharing Team
+Place: Former Team Members
+Team_Link: data-science-and-sharing-team

@@ -9,3 +9,6 @@ Slug: 46
 Date: 2024-10-19 14:11
 Employee_Status: Alumni
 Subheading: Current: Senior Research Fellow, Consumer Financial Protection Bureau
+Team: Data Science and Sharing Team
+Place: Former Team Members
+Team_Link: data-science-and-sharing-team

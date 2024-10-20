@@ -163,7 +163,11 @@ Data Science and Sharing Team
          <article aria-labelledby="node-title-7" class="node node--type-person node--view-mode-team-photo">
             <h2 id="node-title-7">
                <a href="/people/{{person.slug}}" rel="bookmark"><span
-                  class="field field--name-title field--type-string field--label-hidden">{{person.title}}</span>
+                  class="field field--name-title field--type-string field--label-hidden">{{person.title}} 
+                  </span>
+                  
+                  
+               
                </a>
             </h2>
             <div class="node__content">
@@ -174,6 +178,9 @@ Data Science and Sharing Team
                <div class="field field--name-field-job-title field--type-string field--label-visually_hidden">
                   <div class="field__label visually-hidden">Job title</div>
                   <div class="field__item">{{person.position}}</div>
+                  {% if person.subheading %}
+                  <span>{{person.subheading}} </span>
+                  {% endif %}
                </div>
                <div class="field field--name-field-links field--type-link field--label-visually_hidden">
                   <div class="field__label visually-hidden">Links</div>
