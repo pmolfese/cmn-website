@@ -16,7 +16,7 @@ People
              <div class="views-field views-field-rendered-entity">
                 <span class="field-content">
                    <div class="node node--type-person node--view-mode-teaser">
-                      <a href="/people/{{person.slug}}" rel="bookmark">{{person.title}}{% if person.subheading %}
+                      <a href="{{SITEURL}}/people/{{person.slug}}" rel="bookmark">{{person.title}}{% if person.subheading %}
                         , {{person.subheading}} 
                         {% endif %}</a>
                    </div>
@@ -26,7 +26,7 @@ People
                          <div class="views-row">
                             <div class="views-field views-field-title">
                                 <span class="field-content">
-                                    <a href="/{{person.team_link}}" hreflang="en">{{person.team}}</a></span></div>
+                                    <a href="{{SITEURL}}/{{person.team_link}}" hreflang="en">{{person.team}}</a></span></div>
                          </div>
                       </section>
                    </div>
@@ -49,7 +49,7 @@ People
             <div class="views-field views-field-rendered-entity">
                 <span class="field-content">
                     <div class="node node--type-person node--view-mode-teaser">
-                    <a href="/people/{{person.slug}}" rel="bookmark">{{person.title}}{% if person.subheading %}
+                    <a href="{{SITEURL}}/people/{{person.slug}}" rel="bookmark">{{person.title}}{% if person.subheading %}
                     , {{person.subheading}} 
                     {% endif %} </a>
                     </div>
@@ -59,7 +59,7 @@ People
                                     <div class="views-row">
                                         <div class="views-field views-field-title">
                                             <span class="field-content">
-                                                <a href="/{{person.team_link}}" hreflang="en">{{person.team}}</a>
+                                                <a href="{{SITEURL}}/{{person.team_link}}" hreflang="en">{{person.team}}</a>
                                             </span>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@ People
        <div class="views-field views-field-rendered-entity">
           <span class="field-content">
              <div class="node node--type-person node--view-mode-teaser">
-                <a href="/people/{{person.slug}}" rel="bookmark">
+                <a href="{{SITEURL}}/people/{{person.slug}}" rel="bookmark">
                 {{person.title}}
                 {% if person.subheading %}
                 , {{person.subheading}} 
@@ -95,7 +95,7 @@ People
              <div class="views-element-container">
                 <section class="view view-eva view-teams view-id-teams view-display-id-entity_view_2 js-view-dom-id-3d5c95671b03b88f26b5c7f9df871c3a878b633fcc9874eaf2997fa4a62bcb14">
                    <div class="views-row">
-                      <div class="views-field views-field-title"><span class="field-content"><a href="/{{person.team_link}}" hreflang="en">{{person.team}}</a></span></div>
+                      <div class="views-field views-field-title"><span class="field-content"><a href="{{SITEURL}}/{{person.team_link}}" hreflang="en">{{person.team}}</a></span></div>
                    </div>
                 </section>
              </div>
