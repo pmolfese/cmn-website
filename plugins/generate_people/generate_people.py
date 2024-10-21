@@ -52,9 +52,13 @@ def generate_people_pages(generator):
     generator.context['people'] = people
     generator.context['teams_dsst'] = teams_dsst_member
     generator.context['teams_mlt'] = teams_mlt
-    generator.settings['SITEURL'] = f'https://quang-ng.github.io/getpelican-cmn'
+
+def set_siteurl(generator):
+    generator.settings['SITEURL'] = 'https://quang-ng.github.io/getpelican-cmn'
+    generator.context['SITEURL'] = 'https://quang-ng.github.io/getpelican-cmn'
 
 def register():
     """Register the plugin to Pelican's signal system."""
     # Connect the `generate_people_pages` function to the article generator finalization signal
+    signals.initialized.connect(set_siteurl)
     signals.article_generator_finalized.connect(generate_people_pages)
