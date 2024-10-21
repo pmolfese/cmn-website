@@ -61,5 +61,6 @@ def set_siteurl(generator):
 def register():
     """Register the plugin to Pelican's signal system."""
     # Connect the `generate_people_pages` function to the article generator finalization signal
-    signals.initialized.connect(set_siteurl)
+    signals.finalized.connect(set_siteurl)
     signals.article_generator_finalized.connect(generate_people_pages)
+    
