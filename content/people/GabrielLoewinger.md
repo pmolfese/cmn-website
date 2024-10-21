@@ -4,7 +4,6 @@ Image: photo_gabe.jpeg
 website: https://www.gabeloewinger.com/
 Google_Scholar: https://scholar.google.com/citations?user=ZGBjoDsAAAAJ
 Slug: 95
-Date: 2024-10-19 14:00
 Place: Member
 Team_Link: machine-learning-core
 Date: 2010-12-03 10:20
