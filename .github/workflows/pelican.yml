@@ -14,3 +14,5 @@ jobs:
       settings: "publishconf.py"  
       requirements: "pelican[markdown] typogrify"
       python: "3.12"
+      feed_domain: "https://quang-ng.github.io/getpelican-cmn"
+      siteurl: "https://quang-ng.github.io/getpelican-cmn"
