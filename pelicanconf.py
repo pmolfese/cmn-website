@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = False
 
 THEME = "themes/cmn-themes"
 # JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-STATIC_PATHS = ['images', 'pdfs', 'extra/CNAME']
+STATIC_PATHS = ['images']
 
 MARKDOWN = {
     'extensions': ['extra', 'codehilite', 'toc'],
@@ -50,3 +50,4 @@ MARKDOWN = {
 
 # Activate the plugin
 PLUGINS = ['plugins.generate_people']
+SITEURL = 'http://localhost:8000'

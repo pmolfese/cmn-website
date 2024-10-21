@@ -8,6 +8,5 @@ Slug: 50
 Team: Data Science and Sharing Team
 Place: Member
 Team_Link: data-science-and-sharing-team
-Slug: 7
 Date: 2010-12-03 10:20
 Employee_Status: Active

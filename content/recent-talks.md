@@ -22,7 +22,7 @@ Date: 2010-12-03 10:20
   
   <div class="node__content">
     
-            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/event.jpg?itok=R9kFRDCx" width="340" height="340" alt="" class="image-style-event-teaser">
+            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/event.jpg?itok=R9kFRDCx" width="340" height="340" alt="image-style-event-tease" class="image-style-event-teaser">
 
 
 </div>
@@ -81,7 +81,7 @@ Date: 2010-12-03 10:20
   
   <div class="node__content">
     
-            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/event.jpg?itok=R9kFRDCx" width="340" height="340" alt="" class="image-style-event-teaser">
+            <div class="field field--name-field-photo field--type-image field--label-hidden field__item">  <img loading="lazy" src="{static}/images/event.jpg?itok=R9kFRDCx" width="340" height="340" alt="event" class="image-style-event-teaser">
 
 
 </div>

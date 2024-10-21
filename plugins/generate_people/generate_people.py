@@ -4,6 +4,7 @@ from pelican.readers import MarkdownReader
 
 def generate_people_pages(generator):
     """Generate custom pages for people based on their articles."""
+    print("generator.settings['generate_people_pagesgenerate_people_pages']generator.settings['SITEURL']2: ", generator.settings['SITEURL'])
     # Loop over all articles and filter for 'People' category (optional)
     people_dir = os.path.join(generator.settings['PATH'], 'people')
     people = []
@@ -53,10 +54,11 @@ def generate_people_pages(generator):
     generator.context['people'] = people
     generator.context['teams_dsst'] = teams_dsst_member
     generator.context['teams_mlt'] = teams_mlt
-    generator.context['SITEURL'] = 'https://quang-ng.github.io/getpelican-cmn'
+    generator.context['SITEURL'] = generator.settings['SITEURL']
 
 def set_siteurl(generator):
-    generator.settings['SITEURL'] = 'https://quang-ng.github.io/getpelican-cmn'
+    print("generator.settings['SITEURL']generator.settings['SITEURL']: ", generator.settings['SITEURL'])
+    generator.settings['SITEURL'] = generator.settings['SITEURL']
     
 
 def register():
