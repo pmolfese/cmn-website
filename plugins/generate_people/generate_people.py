@@ -22,6 +22,7 @@ def generate_people_pages(generator):
         context = {
             **metadata,
             'content': content,
+            "SITEURL": generator.settings['SITEURL'],
         }
         people.append(context)
 
