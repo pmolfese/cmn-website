@@ -49,5 +49,5 @@ MARKDOWN = {
 
 
 # Activate the plugin
-PLUGINS = ['plugins.generate_people']
+PLUGINS = ['plugins.generate_people', 'plugins.generate_talks']
 SITEURL = 'http://localhost:8000'
