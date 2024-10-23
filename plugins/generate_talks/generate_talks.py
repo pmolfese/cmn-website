@@ -1,3 +1,4 @@
+import datetime
 import os
 import re
 from pelican import signals
@@ -77,6 +78,10 @@ def generate_talks(generator):
 
     # print("TTTT: ", json.dumps(talks, indent=4))
     # print(talks)
+
+    # Sort talks by 'Talk_month' in descending order
+    talks.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
+
 
     generator.context["events"] = talks
 
