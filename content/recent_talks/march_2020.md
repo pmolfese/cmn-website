@@ -3,7 +3,7 @@ Date: 2024-10-19 14:08
 Talk_month: March 2020
 Slug: talk-70
 Speaker_Slug: 69
-Part_of:[The Machine Learning in Brain Imaging Series](/series)
+Part_of:[The Machine Learning in Brain Imaging Series](/MLTalks)
 Links: [View Talk](https://www.youtube.com/watch?v=_enZG0ly5aE&ab_channel=NIMHCenterforMultimodalNeuroimaging)
 Template: talk_detail
 

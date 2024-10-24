@@ -35,6 +35,9 @@ def generate_talks(generator):
 
     people_info = get_speaker_info(generator)
 
+    
+    cmnpres_talks = []
+    mltalks_talks = []
     for filename in os.listdir(people_dir):
         if not filename.endswith(".md"):
             continue
@@ -55,6 +58,7 @@ def generate_talks(generator):
                 text = match.group(1)  # Text inside []
                 link = match.group(2)  # Text inside ()
                 part_of_list.append((text, link))
+                
 
         links = []
         for entry in metadata.get("links", "").split(","):
@@ -72,10 +76,16 @@ def generate_talks(generator):
             "part_of": part_of_list,
             "links": links,
             "speaker": people_info.get(metadata.get("speaker_slug")),
-            # "date": ""
         }
 
         talks_list.append(context)
+
+        if part_of_list:
+            link = part_of_list[0][1]
+            if link == "/CMNPres":
+                cmnpres_talks.append(context)
+            elif link == "/MLTalks":
+                mltalks_talks.append(context)
 
 
 
@@ -83,7 +93,14 @@ def generate_talks(generator):
     talks_list.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
     generator.context["talks_list"] = talks_list
     generator.context["talks_dict"] = generate_talks_dict(talks_list)
-    
+
+    # Sort series talks by 'Talk_month' in descending order
+    cmnpres_talks.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
+
+    mltalks_talks.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
+
+    generator.context["series_talks"] = {"CMNPres": cmnpres_talks, "MLTalks": mltalks_talks}
+    print(generator.context["series_talks"])
 
 def generate_talks_dict(talks_list):
     talks_dict = {}
