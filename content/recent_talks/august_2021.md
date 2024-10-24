@@ -5,7 +5,7 @@ Slug: talk-85
 Speaker_Slug: 48
 Part_of:[Workshop Series 2022](/series)
 Links: [View workshops](https://videocast.nih.gov/watch=45649), [Roundtable Discussion #1](https://videocast.nih.gov/watch=44048),[Roundtable Discussion #2](https://videocast.nih.gov/watch=44065),
-
+Template: talk_detail
 
 The Center for Multimodal Neuroimaging is thrilled to announce the upcoming workshop on Naturalistic Stimuli and Individual Differences with a range of extramural and intramural speakers presenting on their cutting-edge work. The workshop seeks to:
 

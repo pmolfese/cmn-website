@@ -31,7 +31,7 @@ def generate_talks(generator):
     """Generate custom pages for people based on their articles."""
     # Loop over all articles and filter for 'People' category (optional)
     people_dir = os.path.join(generator.settings["PATH"], "recent_talks")
-    talks = []
+    talks_list = []
 
     people_info = get_speaker_info(generator)
 
@@ -74,17 +74,23 @@ def generate_talks(generator):
             "speaker": people_info.get(metadata.get("speaker_slug")),
             # "date": ""
         }
-        talks.append(context)
 
-    # print("TTTT: ", json.dumps(talks, indent=4))
-    # print(talks)
+        talks_list.append(context)
+
+
 
     # Sort talks by 'Talk_month' in descending order
-    talks.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
+    talks_list.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
+    generator.context["talks_list"] = talks_list
+    generator.context["talks_dict"] = generate_talks_dict(talks_list)
+    
 
-
-    generator.context["events"] = talks
-
+def generate_talks_dict(talks_list):
+    talks_dict = {}
+    for article in talks_list:
+        slug = str(article["slug"])
+        talks_dict[slug] = article
+    return talks_dict
 
 def register():
     """Register the plugin to Pelican's signal system."""
