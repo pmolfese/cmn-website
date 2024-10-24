@@ -1,4 +1,4 @@
-title: MLTalks
+title: mltalks
 Name: The Machine Learning in Brain Imaging Series
 Template: series_detail
 Date: 2024-10-24 10:21

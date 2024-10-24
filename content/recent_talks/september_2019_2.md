@@ -3,7 +3,7 @@ Date: 2024-10-19 14:08
 Talk_month: September 2019
 Slug: talk-75
 Speaker_Slug: 46
-Part_of:[CMN Presentation Series](/CMNPres)
+Part_of:[CMN Presentation Series](/cmnpres)
 Links: [View Talk](https://www.youtube.com/watch?v=P4qFDqEKvQI&ab_channel=NIMHCenterforMultimodalNeuroimaging)
 Template: talk_detail
 

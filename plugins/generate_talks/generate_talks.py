@@ -82,9 +82,9 @@ def generate_talks(generator):
 
         if part_of_list:
             link = part_of_list[0][1]
-            if link == "/CMNPres":
+            if link == "/cmnpres":
                 cmnpres_talks.append(context)
-            elif link == "/MLTalks":
+            elif link == "/mltalks":
                 mltalks_talks.append(context)
 
 
@@ -99,8 +99,7 @@ def generate_talks(generator):
 
     mltalks_talks.sort(key=lambda x: datetime.datetime.strptime(x.get("talk_month", ""), "%B %Y"), reverse=True)
 
-    generator.context["series_talks"] = {"CMNPres": cmnpres_talks, "MLTalks": mltalks_talks}
-    print(generator.context["series_talks"])
+    generator.context["series_talks"] = {"cmnpres": cmnpres_talks, "mltalks": mltalks_talks}
 
 def generate_talks_dict(talks_list):
     talks_dict = {}

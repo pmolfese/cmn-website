@@ -3,7 +3,7 @@ Date: 2024-10-19 14:08
 Talk_month: August 2021
 Slug: talk-85
 Speaker_Slug: 48
-Part_of:[CMN Presentation Series](/CMNPres)
+Part_of:[CMN Presentation Series](/cmnpres)
 Links: [View workshops](https://videocast.nih.gov/watch=45649), [Roundtable Discussion #1](https://videocast.nih.gov/watch=44048),[Roundtable Discussion #2](https://videocast.nih.gov/watch=44065),
 Template: talk_detail
 

@@ -1,4 +1,4 @@
-title: CMNPres
+title: cmnpres
 Name: CMN Presentation Series
 Template: series_detail
 Date: 2024-10-24 10:20
