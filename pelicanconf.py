@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = False
 
 THEME = "themes/cmn-themes"
 # JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', "assets"]
 
 MARKDOWN = {
     'extensions': ['extra', 'codehilite', 'toc'],
