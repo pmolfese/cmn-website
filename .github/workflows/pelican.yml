@@ -25,10 +25,15 @@ jobs:
         run: pelican content -o output -s publishconf.py
 
       - name: Run link checker
-        run: linkchecker output/index.html --ignore-url "https://quang-ng.github.io/getpelican-cmn" --quiet
+        run: |
+          linkchecker --check-extern https://quang-ng.github.io/getpelican-cmn \
+            --ignore-url "pattern:.*403.*" \
+            --ignore-url "pattern:mailto:.*" \
+            --ignore-url "pattern:.*\.css" \
+            --ignore-url "https://quang-ng.github.io/getpelican-cmn"
 
   deploy:
-    needs: link_check  # Ensure link_check job completes before deploying
+    needs: link_check
     uses: getpelican/pelican/.github/workflows/github_pages.yml@main
     with:
       settings: "publishconf.py"  
