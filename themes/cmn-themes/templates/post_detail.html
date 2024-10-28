@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+{{ article.title }}
+{% endblock %}
+{% block content %}
+
+
+<article aria-labelledby="page-title" class="node node--type-blog node--view-mode-full">
+
+    <div class="node__content">
+
+        <div
+            class="field field--name-field-team-or-person field--type-entity-reference field--label-hidden field__item">
+            <div class="node node--type-person node--view-mode-teaser">
+
+                <a href="{{SITEURL}}/people/{{posts_dict[article.slug].speaker.slug}}"
+               rel="bookmark">{{posts_dict[article.slug].speaker.title}}{% if
+               posts_dict[article.slug].speaker.subheading %}
+               , {{posts_dict[article.slug].speaker.subheading}}
+               {% endif %}</a>
+
+            </div>
+            <div class="views-element-container"></div>
+
+        </div>
+
+        <div>
+            {{posts_dict[article.slug].content}}
+        </div>
+
+    </div>
+
+</article>
+{% endblock %}
