@@ -18,6 +18,7 @@ def get_speaker_info(generator):
 
         # Prepare context for each person's page
         slug = metadata.get("slug")
+        metadata['date'] = ""
 
         people_info[slug] = metadata
 
@@ -26,7 +27,6 @@ def get_speaker_info(generator):
 
 def generate_talks(generator):
     """Generate custom pages for people based on their articles."""
-    # Loop over all articles and filter for 'People' category (optional)
     people_dir = os.path.join(generator.settings["PATH"], "recent_posts")
     posts_list = []
 
@@ -39,11 +39,12 @@ def generate_talks(generator):
         file_path = os.path.join(people_dir, filename)
         reader = MarkdownReader(generator.settings)
         content, metadata = reader.read(file_path)
+        metadata['date'] = ""
 
         context = {
             **metadata,
-            "content": content,
-            "speaker": people_info.get(metadata.get("host_slug")),
+            # "content": content,
+            "host": people_info.get(metadata.get("host_slug")),
         }
 
         posts_list.append(context)
@@ -56,10 +57,24 @@ def generate_talks(generator):
 
     posts_dict = {}
     for post in posts_list:
+        post["speakers"] = []
+        for i in range(len(post.get("speakers_name", []))):
+            post["speakers"].append({
+                "name": post.get("speakers_name", [])[i],
+                "title": post.get("speakers_title", [])[i],
+                "image": post.get("speakers_images", [])[i],
+                "link": post.get("speakers_link", [])[i],
+                "description": post.get("speakers_description", [])[i],
+            })
         posts_dict[post["slug"]] = post
     generator.context["posts_dict"] = posts_dict
+
+    # Print posts_dict in formatted JSON
+    print("\nPosts Dictionary:")
+    print(json.dumps(posts_dict, indent=2, default=str))
 
 
 def register():
     """Register the plugin to Pelican's signal system."""
     signals.article_generator_finalized.connect(generate_talks)
+
