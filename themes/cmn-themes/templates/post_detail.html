@@ -45,6 +45,16 @@
                 </div>
             </div>
 
+            {% if posts_dict[article.slug].schedule %}
+            <div class="field__item">
+                <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+                    <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item">
+                        <p><a href="{{SITEURL}}/assets/{{posts_dict[article.slug].schedule}}">Schedule can be downloaded here</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
             {% for speaker in posts_dict[article.slug].speakers %}
             <div class="field__item">
                 <div class="paragraph paragraph--type--_-columns paragraph--view-mode--default">
