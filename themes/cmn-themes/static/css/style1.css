@@ -280,7 +280,7 @@ td,th {
     width: 1em;
     height: 1em;
     content: "";
-    background: url(/themes/contrib/classy/images/misc/menu-expanded.png) 0 100% no-repeat;
+    /* background: url(/themes/contrib/classy/images/misc/menu-expanded.png) 0 100% no-repeat; */
 }
 
 [dir="rtl"] .collapse-processed > summary:before {
@@ -502,13 +502,13 @@ abbr.tabledrag-changed,abbr.ajax-changed {
     height: 14px;
     content: "";
     vertical-align: sub;
-    background: url(/themes/contrib/classy/images/icons/e32700/error.svg) no-repeat;
+    /* background: url(/themes/contrib/classy/images/icons/e32700/error.svg) no-repeat; */
     background-size: contain;
 }
 
 .icon-help {
     padding: 1px 0 1px 20px;
-    background: url(/themes/contrib/classy/images/misc/help.png) 0 50% no-repeat;
+    /* background: url(/themes/contrib/classy/images/misc/help.png) 0 50% no-repeat; */
 }
 
 [dir="rtl"] .icon-help {
@@ -522,7 +522,7 @@ abbr.tabledrag-changed,abbr.ajax-changed {
     width: 16px;
     height: 16px;
     text-indent: -9999px;
-    background: url(/themes/contrib/classy/images/misc/feed.svg) no-repeat;
+    /* background: url(/themes/contrib/classy/images/misc/feed.svg) no-repeat; */
 }
 
 .form--inline .form-item {
@@ -633,16 +633,16 @@ ul.menu {
 
 .menu-item--expanded {
     list-style-type: circle;
-    list-style-image: url(/themes/contrib/classy/images/misc/menu-expanded.png);
+    /* list-style-image: url(/themes/contrib/classy/images/misc/menu-expanded.png); */
 }
 
 .menu-item--collapsed {
     list-style-type: disc;
-    list-style-image: url(/themes/contrib/classy/images/misc/menu-collapsed.png);
+    /* list-style-image: url(/themes/contrib/classy/images/misc/menu-collapsed.png); */
 }
 
 [dir="rtl"] .menu-item--collapsed {
-    list-style-image: url(/themes/contrib/classy/images/misc/menu-collapsed-rtl.png);
+    /* list-style-image: url(/themes/contrib/classy/images/misc/menu-collapsed-rtl.png); */
 }
 
 .menu-item {
@@ -797,7 +797,7 @@ ul.tabs {
     color: #325e1c;
     border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
     background-color: #f3faef;
-    background-image: url(/themes/contrib/classy/images/icons/73b355/check.svg);
+    /* background-image: url(/themes/contrib/classy/images/icons/73b355/check.svg); */
     box-shadow: -8px 0 0 #77b259;
 }
 
@@ -811,7 +811,7 @@ ul.tabs {
     color: #734c00;
     border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
     background-color: #fdf8ed;
-    background-image: url(/themes/contrib/classy/images/icons/e29700/warning.svg);
+    /* background-image: url(/themes/contrib/classy/images/icons/e29700/warning.svg); */
     box-shadow: -8px 0 0 #e09600;
 }
 
@@ -824,7 +824,7 @@ ul.tabs {
     color: #a51b00;
     border-color: #f9c9bf #f9c9bf #f9c9bf transparent;
     background-color: #fcf4f2;
-    background-image: url(/themes/contrib/classy/images/icons/e32700/error.svg);
+    /* background-image: url(/themes/contrib/classy/images/icons/e32700/error.svg); */
     box-shadow: -8px 0 0 #e62600;
 }
 
