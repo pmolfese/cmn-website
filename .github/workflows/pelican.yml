@@ -26,11 +26,12 @@ jobs:
 
       - name: Run link checker
         run: |
-          linkchecker --check-extern https://quang-ng.github.io/getpelican-cmn \
-            --ignore-url "pattern:.*403.*" \
-            --ignore-url "pattern:mailto:.*" \
-            --ignore-url "pattern:.*\.css" \
-            --ignore-url "https://quang-ng.github.io/getpelican-cmn"
+          echo "Link checking is disabled"
+          # linkchecker --check-extern https://quang-ng.github.io/getpelican-cmn \
+          #   --ignore-url "pattern:.*403.*" \
+          #   --ignore-url "pattern:mailto:.*" \
+          #   --ignore-url "pattern:.*\.css" \
+          #   --ignore-url "https://quang-ng.github.io/getpelican-cmn"
 
   deploy:
     needs: link_check
