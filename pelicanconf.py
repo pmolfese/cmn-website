@@ -3,12 +3,12 @@ from pelican import signals
 from pelican.readers import MarkdownReader
 from pelican.contents import Content
 
-AUTHOR = 'Quang Nguyen'
+AUTHOR = 'PM'
 SITENAME = 'Center for Multimodal Neuroimaging'
 
 PATH = "content"
 
-TIMEZONE = 'Asia/Ho_Chi_Minh'
+TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
 
@@ -55,4 +55,4 @@ PLUGINS = [
     'plugins.generate_series',
     'plugins.generate_posts',
 ]
-SITEURL = 'http://localhost:8000'
+SITEURL = ''
