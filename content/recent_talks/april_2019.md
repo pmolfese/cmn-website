@@ -2,7 +2,7 @@ Title: Benefits of Multi-Echo fMRI
 Date: 2019-04-05 14:08
 Talk_month: April 2019
 Slug: talk-32
-Speaker_Slug: 72
+Speaker_Slug: 73
 Part_of:[CMN Presentation Series](/cmnpres)
 Links: [View talk](https://youtu.be/G1Ftd2IwF14)
 Template: talk_detail
