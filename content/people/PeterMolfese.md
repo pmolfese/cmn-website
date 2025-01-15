@@ -1,7 +1,7 @@
 Title: Peter Molfese
 Position: Science Lead
 Image: molfese_headshot.jpg
-SFIM_Profile: https://fim.nimh.nih.gov/profiles/peter-j-molfese
+SFIM_Profile: https://fim.nimh.nih.gov/members/molfese/
 Github: https://github.com/pmolfese
 Science_Blog: https://blog.cogneurostats.com
 Slug: 48

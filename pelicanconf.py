@@ -55,4 +55,4 @@ PLUGINS = [
     'plugins.generate_series',
     'plugins.generate_posts',
 ]
-SITEURL = ''
+SITEURL = 'https://cmn.nimh.nih.gov'
