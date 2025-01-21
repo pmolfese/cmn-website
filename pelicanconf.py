@@ -7,6 +7,8 @@ AUTHOR = 'PM'
 SITENAME = 'Center for Multimodal Neuroimaging'
 
 PATH = "content"
+#ARTICLE_PATHS = ['recent_posts', 'recent_talks', 'series']
+ARTICLE_EXCLUDES = ['people']
 
 TIMEZONE = 'America/New_York'
 
@@ -55,5 +57,5 @@ PLUGINS = [
     'plugins.generate_series',
     'plugins.generate_posts',
 ]
-SITEURL = 'https://cmn.nimh.nih.gov'
-#SITEURL = 'http://localhost:8000'
+#SITEURL = 'https://cmn.nimh.nih.gov'
+SITEURL = 'http://localhost:8000'
