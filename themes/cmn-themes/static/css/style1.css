@@ -1179,7 +1179,7 @@ hr,.layout-container>footer {
     text-decoration: underline;
 }
 
-#contact-message-contact-form #edit-preview,.page-node-type-team .view-recent-posts .field--name-field-team-or-person,.page-node-type-person .view-recent-posts .field--name-field-team-or-person,.page-node-type-team .view-events .field--name-field-team-or-person,.page-node-type-person .view-events .field--name-field-team-or-person,.view-events .view-people,.field--name-field-paragraphs+.field--name-body,.page-node-type-series .view-events .field--name-field-series,.view-events .field--name-field-when {
+.page-node-type-team .view-recent-posts .field--name-field-team-or-person,.page-node-type-person .view-recent-posts .field--name-field-team-or-person,.page-node-type-team .view-events .field--name-field-team-or-person,.page-node-type-person .view-events .field--name-field-team-or-person,.view-events .view-people,.field--name-field-paragraphs+.field--name-body,.page-node-type-series .view-events .field--name-field-series,.view-events .field--name-field-when {
     display: none;
 }
 
@@ -1282,11 +1282,6 @@ input,textarea {
     line-height: inherit;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-#contact-message-contact-form label {
-    display: inline-block;
-    min-width: 10.5rem;
 }
 
 .vertical-spacer {
